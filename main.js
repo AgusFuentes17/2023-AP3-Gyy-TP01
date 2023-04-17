@@ -97,5 +97,35 @@ function mostrarMinas()
 
 function contarMinasAlrededor(columna, fila)
 {
-  return 9;   //Esto hace que SIEMPRE cuente 9 minas alrededor. Modificar/completar
+  for(let col = 0; col < COLUMNAS; col++){
+    for(let fil = 0; fil < FILAS; fil++){
+      if(tieneMinaCasillero(col+1, fil+1) || tieneMinaCasillero(col-1, fil-1) || tieneMinaCasillero(col, fil+1) || tieneMinaCasillero(col+1, fil) || tieneMinaCasillero(col, fil-1) || tieneMinaCasillero(col-1, fil)){
+        return 1;
+      }
+      if(tieneMinaCasillero(col+2, fil+2) || tieneMinaCasillero(col-2, fil-2) || tieneMinaCasillero(col, fil+2) || tieneMinaCasillero(col+2, fil) || tieneMinaCasillero(col, fil-2) || tieneMinaCasillero(col-2, fil)){
+        return 2;
+      }
+      if(tieneMinaCasillero(col+3, fil+3) || tieneMinaCasillero(col-3, fil-3) || tieneMinaCasillero(col, fil+3) || tieneMinaCasillero(col+3, fil) || tieneMinaCasillero(col, fil-3) || tieneMinaCasillero(col-3, fil)){
+        return 3;
+      }
+      if(tieneMinaCasillero(col+4, fil+4) || tieneMinaCasillero(col-4, fil-4) || tieneMinaCasillero(col, fil+4) || tieneMinaCasillero(col+4, fil) || tieneMinaCasillero(col, fil-4) || tieneMinaCasillero(col-4, fil)){
+        return 4;
+      }
+      if(tieneMinaCasillero(col+5, fil+5) || tieneMinaCasillero(col-5, fil-5) || tieneMinaCasillero(col, fil+5) || tieneMinaCasillero(col+5, fil) || tieneMinaCasillero(col, fil-5) || tieneMinaCasillero(col-5, fil)){
+        return 5;
+      }
+      if(tieneMinaCasillero(col+6, fil+6) || tieneMinaCasillero(col-6, fil-6) || tieneMinaCasillero(col, fil+6) || tieneMinaCasillero(col+6, fil) || tieneMinaCasillero(col, fil-6) || tieneMinaCasillero(col-6, fil)){
+        return 6;
+      }
+      if(tieneMinaCasillero(col+7, fil+7) || tieneMinaCasillero(col-7, fil-7) || tieneMinaCasillero(col, fil+7) || tieneMinaCasillero(col+7, fil) || tieneMinaCasillero(col, fil-7) || tieneMinaCasillero(col-7, fil)){
+        return 7;
+      }
+      if(tieneMinaCasillero(col+8, fil+8) || tieneMinaCasillero(col-8, fil-8) || tieneMinaCasillero(col, fil+8) || tieneMinaCasillero(col+8, fil) || tieneMinaCasillero(col, fil-8) || tieneMinaCasillero(col-8, fil)){
+        return 8;
+      }
+      if(tieneMinaCasillero(col+9, fil+9) || tieneMinaCasillero(col-9, fil-9) || tieneMinaCasillero(col, fil+9) || tieneMinaCasillero(col+9, fil) || tieneMinaCasillero(col, fil-9) || tieneMinaCasillero(col-9, fil)){
+        return 9;
+      }
+    }
+  }
 }
