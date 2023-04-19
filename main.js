@@ -97,11 +97,11 @@ function mostrarMinas()
 
 function contarMinasAlrededor(columna, fila)
 {
-  let arr1 = [-1,0,1,1,1,0,-1,-1];
-  let arr2 = [-1,-1,-1,0,1,1,1,0];
+  let arrayColumnas = [-1,0,1,1,1,0,-1,-1];
+  let arrayFilas = [-1,-1,-1,0,1,1,1,0];
   let cont = 0;
   for(let i = 0; i < 8 ;i++){
-    if (tieneMinaCasillero(columna+ arr1[i], fila+arr2[i])){
+    if (tieneMinaCasillero(columna+ arrayColumnas[i], fila+arrayFilas[i])){
       cont++;
     }
   }
