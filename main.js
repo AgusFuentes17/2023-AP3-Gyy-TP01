@@ -73,12 +73,12 @@ function ganoElJuego()
 
 function ponerMinasTablero()
 {
-  let minas = CANTIDAD_MINAS;
-  while(minas != 0){
+  let minas = 0;
+  while(minas < CANTIDAD_MINAS){
     let numeroRandomCol = Math.floor(Math.random() * COLUMNAS);
     let numeroRandomFil = Math.floor(Math.random() * FILAS);
     if(!tieneMinaCasillero(numeroRandomCol, numeroRandomFil)){
-      minas -= 1;
+      minas ++;
       ponerMinaCasillero(numeroRandomCol, numeroRandomFil);
     }
   }
